@@ -16,11 +16,6 @@ function pickLocation() {
     food.mult(scl);
 }
 
-function mousePressed() {
-    s.total++;
-}
-
-
 
 function draw() {
     background(255, 229, 204);
