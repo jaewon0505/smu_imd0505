@@ -6,7 +6,7 @@ let x = 100,
 function setup() {
     createCanvas(710, 400);
     strokeWeight(20.0);
-    stroke(255, 100);
+    stroke(51, 255, 51,);
 }
 
 function draw() {
