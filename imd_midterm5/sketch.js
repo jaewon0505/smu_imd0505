@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-    background(153, 0, 153);
+    background(102, 0, 102);
 
     dx = mouseX - x;
     dy = mouseY - y;
