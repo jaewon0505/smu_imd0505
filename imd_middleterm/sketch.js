@@ -25,6 +25,20 @@ function mousePressed() {
     s.total++;
 }
 
+function checkGameStatus() {
+    if (
+        xCor[xCor.length - 1] > width ||
+        xCor[xCor.length - 1] < 0 ||
+        yCor[yCor.length - 1] > height ||
+        yCor[yCor.length - 1] < 0 ||
+        checkSnakeCollision()
+    ) {
+        noLoop();
+        const scoreVal = parseInt(scoreElem.html().substring(8));
+        scoreElem.html('Game ended! Your score was : ' + scoreVal);
+    }
+}
+
 function draw() {
     background(51);
     if (s.eat(food)) {
