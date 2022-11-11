@@ -20,17 +20,7 @@ function mousePressed() {
     s.total++;
 }
 
-function checkForFruit() {
-    point(xFruit, yFruit);
-    if (xCor[xCor.length - 1] === xFruit && yCor[yCor.length - 1] === yFruit) {
-        const prevScore = parseInt(scoreElem.html().substring(8));
-        scoreElem.html('Score = ' + (prevScore + 1));
-        xCor.unshift(xCor[0]);
-        yCor.unshift(yCor[0]);
-        numSegments++;
-        updateFruitCoordinates();
-    }
-}
+
 
 function draw() {
     background(255, 229, 204);
