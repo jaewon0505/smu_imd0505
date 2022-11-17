@@ -2,15 +2,94 @@ let s;
 let scl = 20;
 let food;
 
+
 function setup() {
     createCanvas(600, 600);
     s = new Snake();
     frameRate(13);
     pickLocation();
-    scoreElem = createDiv('Score = 0');
-    scoreElem.position(20, 20);
-    scoreElem.id = 'score';
-    scoreElem.style('color', 'white');
+    scoreElem = createDiv('🌴');
+    scoreElem.position(18, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(50, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(82, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(114, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(146, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(178, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(210, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(242, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(274, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(306, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(338, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(370, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(402, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(434, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(466, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(498, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(530, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(562, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(592, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 680,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 648,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 616,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 584,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 552,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 520,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 488,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 456,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 424,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 392,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 360,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 328,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 296,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 264,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 232,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 200,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 168,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 136,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 104,);
+    scoreElem = createDiv('🌴');
+    scoreElem.position(620, 72,);
+
+
+
+
 
 }
 
@@ -23,10 +102,10 @@ function pickLocation() {
 
 function checkGameStatus() {
     if (
-        this.x[this.x.length - 1] > width ||
-        this.x[this.x.length - 1] < 0 ||
-        this.y[this.y.length - 1] > height ||
-        this.y[this.y.length - 1] < 0 ||
+        cols[cols.length - 1] > width ||
+        cols[cols.length - 1] < 0 ||
+        rows[rows.length - 1] > height ||
+        rows[rows.length - 1] < 0 ||
         checkSnakeCollision()
     ) {
         noLoop();
