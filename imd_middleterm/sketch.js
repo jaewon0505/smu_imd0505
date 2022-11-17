@@ -1,9 +1,13 @@
 let s;
 let scl = 20;
 let food;
+let bkgImg;
 
-
+function preload() {
+    bkgImg = loadImage("image/img1.jpg")
+}
 function setup() {
+
     createCanvas(600, 600);
     s = new Snake();
     frameRate(13);
@@ -100,21 +104,6 @@ function pickLocation() {
     food.mult(scl);
 }
 
-function checkGameStatus() {
-    if (
-        cols[cols.length - 1] > width ||
-        cols[cols.length - 1] < 0 ||
-        rows[rows.length - 1] > height ||
-        rows[rows.length - 1] < 0 ||
-        checkSnakeCollision()
-    ) {
-        noLoop();
-        const scoreVal = parseInt(scoreElem.html().substring(8));
-        scoreElem.html('Game ended! Your score was : ' + scoreVal);
-    }
-}
-
-
 
 function draw() {
     background(255, 229, 204);
@@ -126,6 +115,7 @@ function draw() {
     s.show();
     fill(255, 0, 100);
     rect(food.x, food.y, scl, scl);
+
 }
 
 function keyPressed() {
