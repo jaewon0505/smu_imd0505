@@ -7,6 +7,11 @@ function setup() {
     s = new Snake();
     frameRate(13);
     pickLocation();
+    scoreElem = createDiv('Score = 0');
+    scoreElem.position(20, 20);
+    scoreElem.id = 'score';
+    scoreElem.style('color', 'white');
+
 }
 
 function pickLocation() {
@@ -15,6 +20,21 @@ function pickLocation() {
     food = createVector(floor(random(cols)), floor(random(rows)));
     food.mult(scl);
 }
+
+function checkGameStatus() {
+    if (
+        this.x[this.x.length - 1] > width ||
+        this.x[this.x.length - 1] < 0 ||
+        this.y[this.y.length - 1] > height ||
+        this.y[this.y.length - 1] < 0 ||
+        checkSnakeCollision()
+    ) {
+        noLoop();
+        const scoreVal = parseInt(scoreElem.html().substring(8));
+        scoreElem.html('Game ended! Your score was : ' + scoreVal);
+    }
+}
+
 
 
 function draw() {
